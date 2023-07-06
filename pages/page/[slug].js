@@ -6,7 +6,7 @@ import Posts from "@partials/Posts";
 const { blog_folder } = config.settings;
 
 // blog pagination
-const BlogPagination = ({ posts, authors, currentPage, pagination }) => {
+const BlogPagination = ({ posts, pakiety, currentPage, pagination }) => {
   const indexOfLastPost = currentPage * pagination;
   const indexOfFirstPost = indexOfLastPost - pagination;
   const totalPages = Math.ceil(posts.length / pagination);
@@ -16,7 +16,7 @@ const BlogPagination = ({ posts, authors, currentPage, pagination }) => {
     <Base>
       <section className="section">
         <div className="container">
-          <Posts className="mb-16" posts={currentPosts} authors={authors} />
+          <Posts className="mb-16" posts={currentPosts} pakiety={pakiety} />
           <Pagination totalPages={totalPages} currentPage={currentPage} />
         </div>
       </section>
@@ -53,13 +53,13 @@ export const getStaticProps = async ({ params }) => {
   const currentPage = parseInt((params && params.slug) || 1);
   const { pagination } = config.settings;
   const posts = getSinglePage(`content/${blog_folder}`);
-  const authors = getSinglePage("content/authors");
+  const pakiety = getSinglePage("content/pakiety");
 
   return {
     props: {
       pagination: pagination,
       posts: posts,
-      authors: authors,
+      pakiety: pakiety,
       currentPage: currentPage,
     },
   };

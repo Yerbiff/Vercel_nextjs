@@ -1,8 +1,8 @@
 ---
 title: "I’m John Doe, A content writer based in LDN, currently at Bookworm"
-meta_title: "About"
+meta_title: "Oferta"
 image: "/images/author.jpg"
-layout: "about"
+layout: "oferta"
 draft: false
 
 # social sites

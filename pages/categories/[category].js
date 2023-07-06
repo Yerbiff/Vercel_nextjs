@@ -7,7 +7,7 @@ import Posts from "@partials/Posts";
 const { blog_folder } = config.settings;
 
 // category page
-const Category = ({ category, posts, authors }) => {
+const Category = ({ category, posts, pakiety }) => {
   return (
     <Base title={category}>
       <div className="section">
@@ -16,7 +16,7 @@ const Category = ({ category, posts, authors }) => {
             Showing posts from <span className="text-primary">{category}</span>{" "}
             category
           </h1>
-          <Posts posts={posts} authors={authors} />
+          <Posts posts={posts} pakiety={pakiety} />
         </div>
       </div>
     </Base>
@@ -46,9 +46,9 @@ export const getStaticProps = ({ params }) => {
       slugify(category).includes(params.category)
     )
   );
-  const authors = getSinglePage("content/authors");
+  const pakiety = getSinglePage("content/pakiety");
 
   return {
-    props: { posts: filterPosts, category: params.category, authors: authors },
+    props: { posts: filterPosts, category: params.category, pakiety: pakiety },
   };
 };
