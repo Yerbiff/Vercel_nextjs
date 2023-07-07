@@ -7,6 +7,7 @@ import TagManager from "react-gtm-module";
 import "styles/style.scss";
 import Footer from "@layouts/partials/Footer";
 import Header from "@layouts/partials/Header";
+import Base from "@layouts/Baseof";
 
 const App = ({ Component, pageProps }) => {
   // import google font css
@@ -33,6 +34,7 @@ const App = ({ Component, pageProps }) => {
   }, []);
 
   return (
+    <Base>
     <JsonContext>
       <Head>
         {/* google font css */}
@@ -56,6 +58,7 @@ const App = ({ Component, pageProps }) => {
       <Component {...pageProps} />
       <Footer />
     </JsonContext>
+    </Base>
   );
 };
 
