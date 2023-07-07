@@ -6,7 +6,7 @@ const Document = () => {
   // destructuring items from config object
   const { favicon } = config.site;
   return (
-    <Html lang="pl">
+    <Html lang="en">
       <Head>
         {/* favicon */}
         <link rel="shortcut icon" href={favicon} />
