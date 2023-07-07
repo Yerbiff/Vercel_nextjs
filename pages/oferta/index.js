@@ -27,7 +27,7 @@ const Oferta = () => {
         {cities.map((city, index) => (
         <div className="w-full sm:w-1/2 md:w-1/4" key={index}>
             <h3 className="h6 mb-1">
-            <Link className="block hover:text-primary" href={`${city.slug}`}>{city.name}</Link>
+            <Link className="block hover:text-primary" href={`oferta/${city.slug}`}>{city.name}</Link>
             </h3>
         </div>
         ))}
