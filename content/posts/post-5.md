@@ -1,7 +1,7 @@
 ---
 title: "Indywidualne podejście: "
 description: "meta description"
-image: "/images/posts/05.jpg"
+image: "/images/posts/individual.jpg"
 date: 2021-01-25T16:56:47+06:00
 draft: false
 authors: ["John Doe"]

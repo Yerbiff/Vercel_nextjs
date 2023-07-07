@@ -1,4 +1,3 @@
-import Pagination from "@components/Pagination";
 import config from "@config/config.json";
 import Base from "@layouts/Baseof";
 import { getListPage, getSinglePage } from "@lib/contentParser";
@@ -25,11 +24,6 @@ const PakietPagination = ({
         <div className="container text-center">
           {markdownify(title, "h1", "h2 mb-16")}
           <Pakiety pakiety={currentPakiety} />
-          <Pagination
-            section="pakiety"
-            totalPages={totalPages}
-            currentPage={currentPage}
-          />
         </div>
       </section>
     </Base>

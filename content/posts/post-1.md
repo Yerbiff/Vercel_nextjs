@@ -2,7 +2,7 @@
 title: "Zamień swoją wizję w rzeczywistość!"
 description: "meta description"
 date: 2022-04-04T05:00:00Z
-image: "/images/posts/01.jpg"
+image: "/images/posts/wizja.jpg"
 categories: ["art"]
 authors: ["Mark Dinn"]
 tags: ["diy", "toy"]

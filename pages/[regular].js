@@ -4,12 +4,11 @@ import Oferta from "@layouts/Oferta";
 import Base from "@layouts/Baseof";
 import Cennik from "@layouts/Cennik";
 import Default from "@layouts/Default";
-import PostSingle from "@layouts/PostSingle";
 import { getRegularPage, getSinglePage } from "@lib/contentParser";
 const { blog_folder } = config.settings;
 
 // for all regular pages
-const RegularPages = ({ slug, data, postSlug, pakiety, posts }) => {
+const RegularPages = ({ slug, data, postSlug}) => {
   const { title, meta_title, description, image, noindex, canonical, layout } =
     data.frontmatter;
   const { content } = data;
@@ -25,7 +24,7 @@ const RegularPages = ({ slug, data, postSlug, pakiety, posts }) => {
     >
       {/* single post */}
       {postSlug.includes(slug) ? (
-        <PostSingle slug={slug} post={data} pakiety={pakiety} posts={posts} />
+        false
       ) : layout === "404" ? (
         <NotFound data={data} />
       ) : layout === "oferta" ? (

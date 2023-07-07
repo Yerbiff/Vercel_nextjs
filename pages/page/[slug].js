@@ -1,4 +1,3 @@
-import Pagination from "@components/Pagination";
 import config from "@config/config.json";
 import Base from "@layouts/Baseof";
 import { getSinglePage } from "@lib/contentParser";
@@ -17,7 +16,6 @@ const BlogPagination = ({ posts, pakiety, currentPage, pagination }) => {
       <section className="section">
         <div className="container">
           <Posts className="mb-16" posts={currentPosts} pakiety={pakiety} />
-          <Pagination totalPages={totalPages} currentPage={currentPage} />
         </div>
       </section>
     </Base>
