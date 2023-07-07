@@ -3,7 +3,6 @@ import shortcodes from "@shortcodes/all";
 import { MDXRemote } from "next-mdx-remote";
 import Image from "next/image";
 import Base from "./Baseof";
-import Social from "./components/Social";
 
 const PakietSingle = ({ frontmatter, content, mdxContent }) => {
   const { description, social, title, image } = frontmatter;
@@ -28,7 +27,6 @@ const PakietSingle = ({ frontmatter, content, mdxContent }) => {
               </div>
             )}
             {markdownify(title, "h1", "h2 mb-8")}
-            <Social source={social} className="social-icons-simple" />
             <div className="content">
               <MDXRemote {...mdxContent} components={shortcodes} />
             </div>

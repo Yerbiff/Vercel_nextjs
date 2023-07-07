@@ -10,7 +10,7 @@
     },
     {
       "name": "Cennik",
-      "url": "/pakiety"
+      "url": "/cennik"
     }
   ],
   "footer": [
@@ -20,7 +20,11 @@
     },
     {
       "name": "Cennik",
-      "url": "/pakiety"
+      "url": "/cennik"
+    },
+    {
+      "name": "Cennik",
+      "url": "/cennik"
     }
   ]
 }

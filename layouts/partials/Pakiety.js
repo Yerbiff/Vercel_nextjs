@@ -20,7 +20,7 @@ const Pakiety = ({ pakiety }) => {
           )}
           <h3 className="h4 mb-2">
             <Link
-              href={`/pakiety/${pakiet.slug}`}
+              href={`/cennik/${pakiet.slug}`}
               className="block hover:text-primary"
             >
               {pakiet.frontmatter.title}
