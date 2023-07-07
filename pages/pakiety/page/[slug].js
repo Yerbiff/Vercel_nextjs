@@ -3,20 +3,20 @@ import config from "@config/config.json";
 import Base from "@layouts/Baseof";
 import { getListPage, getSinglePage } from "@lib/contentParser";
 import { markdownify } from "@lib/utils/textConverter";
-import Authors from "@partials/Authors";
+import Pakiety from "@partials/Pakiety";
 
 // blog pagination
-const AuthorPagination = ({
-  authorIndex,
-  authors,
+const PakietPagination = ({
+  pakietIndex,
+  pakiety,
   currentPage,
   pagination,
 }) => {
-  const indexOfLastAuthor = currentPage * pagination;
-  const indexOfFirstAuthor = indexOfLastAuthor - pagination;
-  const totalPages = Math.ceil(authors.length / pagination);
-  const currentAuthors = authors.slice(indexOfFirstAuthor, indexOfLastAuthor);
-  const { frontmatter, content } = authorIndex;
+  const indexOfLastPakiet = currentPage * pagination;
+  const indexOfFirstPakiet = indexOfLastPakiet - pagination;
+  const totalPages = Math.ceil(pakiety.length / pagination);
+  const currentPakiety = pakiety.slice(indexOfFirstPakiet, indexOfLastPakiet);
+  const { frontmatter, content } = pakietIndex;
   const { title } = frontmatter;
 
   return (
@@ -24,9 +24,9 @@ const AuthorPagination = ({
       <section className="section">
         <div className="container text-center">
           {markdownify(title, "h1", "h2 mb-16")}
-          <Authors authors={currentAuthors} />
+          <Pakiety pakiety={currentPakiety} />
           <Pagination
-            section="authors"
+            section="pakiety"
             totalPages={totalPages}
             currentPage={currentPage}
           />
@@ -36,11 +36,11 @@ const AuthorPagination = ({
   );
 };
 
-export default AuthorPagination;
+export default PakietPagination;
 
 // get authors pagination slug
 export const getStaticPaths = () => {
-  const getAllSlug = getSinglePage("content/authors");
+  const getAllSlug = getSinglePage("content/pakiety");
   const allSlug = getAllSlug.map((item) => item.slug);
   const { pagination } = config.settings;
   const totalPages = Math.ceil(allSlug.length / pagination);
@@ -64,16 +64,16 @@ export const getStaticPaths = () => {
 export const getStaticProps = async ({ params }) => {
   const currentPage = parseInt((params && params.slug) || 1);
   const { pagination } = config.settings;
-  const authors = getSinglePage("content/authors");
-  const authorIndex = await getListPage("content/authors/_index.md");
+  const pakiety = getSinglePage("content/pakiety");
+  const pakietIndex = await getListPage("content/pakiety/_index.md");
 
   return {
     props: {
       pagination: pagination,
-      authors: authors,
+      pakiety: pakiety,
       currentPage: currentPage,
-      authorIndex: authorIndex,
-      mdxContent: authorIndex.mdxContent,
+      pakietIndex: pakietIndex,
+      mdxContent: pakietIndex.mdxContent,
     },
   };
 };

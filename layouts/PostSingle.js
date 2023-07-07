@@ -8,7 +8,7 @@ import { MDXRemote } from "next-mdx-remote";
 import Image from "next/image";
 import Link from "next/link";
 
-const PostSingle = ({ post, posts, authors, slug }) => {
+const PostSingle = ({ post, posts, pakiety, slug }) => {
   const { frontmatter, content, mdxContent } = post;
   let { description, title, date, image, categories, tags } = frontmatter;
   description = description ? description : content.slice(0, 120);
@@ -22,28 +22,28 @@ const PostSingle = ({ post, posts, authors, slug }) => {
             {markdownify(title, "h1", "h2")}
             <ul className="mt-4 mb-8 flex flex-wrap items-center justify-center space-x-3 text-text">
               <li>
-                {authors
-                  .filter((author) =>
-                    frontmatter.authors
-                      .map((author) => slugify(author))
-                      .includes(slugify(author.frontmatter.title))
+                {pakiety
+                  .filter((pakiet) =>
+                    frontmatter.pakiety
+                      .map((pakiet) => slugify(pakiet))
+                      .includes(slugify(pakiet.frontmatter.title))
                   )
-                  .map((author, i) => (
+                  .map((pakiet, i) => (
                     <Link
-                      href={`/authors/${slugify(author.frontmatter.title)}`}
-                      key={`author-${i}`}
+                      href={`/pakiety/${slugify(pakiet.frontmatter.title)}`}
+                      key={`pakiet-${i}`}
                       className="flex items-center hover:text-primary"
                     >
-                      {author.frontmatter.image && (
+                      {pakiet.frontmatter.image && (
                         <Image
-                          src={author.frontmatter.image}
-                          alt={author.frontmatter.title}
+                          src={pakiet.frontmatter.image}
+                          alt={pakiet.frontmatter.title}
                           height={50}
                           width={50}
                           className="mr-2 h-6 w-6 rounded-full"
                         />
                       )}
-                      <span>{author.frontmatter.title}</span>
+                      <span>{pakiet.frontmatter.title}</span>
                     </Link>
                   ))}
               </li>

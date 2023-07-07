@@ -1,7 +1,7 @@
 import config from "@config/config";
 import { markdownify } from "@lib/utils/textConverter";
 
-const Contact = ({ data }) => {
+const Cennik = ({ data }) => {
   const { frontmatter } = data;
   const { title } = frontmatter;
   const { contact_form_action } = config.params;
@@ -61,4 +61,4 @@ const Contact = ({ data }) => {
   );
 };
 
-export default Contact;
+export default Cennik;

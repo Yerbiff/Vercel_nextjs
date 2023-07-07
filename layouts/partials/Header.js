@@ -1,9 +1,7 @@
 import Logo from "@components/Logo";
 import menu from "@config/menu.json";
-import SearchModal from "@layouts/partials/SearchModal";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { IoSearch } from "react-icons/io5";
 
 const Header = () => {
   // distructuring the main menu from menu object
@@ -11,7 +9,6 @@ const Header = () => {
 
   // states declaration
   const [navFixed, setNavFixed] = useState(false);
-  const [searchModal, setSearchModal] = useState(false);
 
   useEffect(() => {
     const changeNavbarBackground = () => {
@@ -100,21 +97,6 @@ const Header = () => {
               </React.Fragment>
             ))}
           </ul>
-          <div className="order-1 ml-auto md:order-2 md:ml-0">
-            <div
-              className="cursor-pointer p-2 text-xl text-dark hover:text-primary"
-              onClick={() => {
-                setSearchModal(true);
-              }}
-            >
-              <IoSearch />
-            </div>
-          </div>
-
-          <SearchModal
-            searchModal={searchModal}
-            setSearchModal={setSearchModal}
-          />
         </nav>
       </header>
     </>
