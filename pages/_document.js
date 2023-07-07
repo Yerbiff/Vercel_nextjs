@@ -6,12 +6,12 @@ const Document = () => {
   // destructuring items from config object
   const { favicon } = config.site;
   return (
-    <Html lang="en">
+    <Html lang="pl">
       <Head>
         {/* favicon */}
         <link rel="shortcut icon" href={favicon} />
         {/* theme meta */}
-        <meta name="theme-name" content="bookworm-light-nextjs" />
+        <meta name="MediaFusion" content="MediaFusion site" />
         <meta name="msapplication-TileColor" content="#000000" />
         <meta
           name="theme-color"
