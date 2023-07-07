@@ -13,9 +13,8 @@ const PakietPagination = ({
 }) => {
   const indexOfLastPakiet = currentPage * pagination;
   const indexOfFirstPakiet = indexOfLastPakiet - pagination;
-  const totalPages = Math.ceil(pakiety.length / pagination);
   const currentPakiety = pakiety.slice(indexOfFirstPakiet, indexOfLastPakiet);
-  const { frontmatter, content } = pakietIndex;
+  const { frontmatter} = pakietIndex;
   const { title } = frontmatter;
 
   return (
