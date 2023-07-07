@@ -5,6 +5,8 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 import TagManager from "react-gtm-module";
 import "styles/style.scss";
+import Footer from "@layouts/partials/Footer";
+import Header from "@layouts/partials/Header";
 
 const App = ({ Component, pageProps }) => {
   // import google font css
@@ -50,7 +52,9 @@ const App = ({ Component, pageProps }) => {
           content="width=device-width, initial-scale=1, maximum-scale=5"
         />
       </Head>
+      <Header />
       <Component {...pageProps} />
+      <Footer />
     </JsonContext>
   );
 };

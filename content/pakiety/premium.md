@@ -2,10 +2,6 @@
 title: Premium
 image: /images/authors/john-doe.jpg
 description: this is meta description
-social:
-  facebook: https://www.facebook.com/
-  twitter: https://www.twitter.com/
-  instagram: https://www.instagram.com/
 ---
 
 Nasz Plan Premium to kompleksowe rozwiązanie dla  przedsiębiorstw, które poszukują zaawansowanych strategii reklamowych i większego zasięgu. Oferujemy pełen wachlarz usług, które pomogą wzmocnić Twoją markę i osiągnąć znaczące wyniki. Ten plan obejmuje wszystko, co znajduje się w Planie Podstawowym, a także:
