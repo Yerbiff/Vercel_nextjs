@@ -1,7 +1,8 @@
 ---
 title: Indywidualny
-image: /images/authors/mark-dinn.jpg
+image: /images/pakiety/swatch-wrzosowy-pastelowy.jpg
 description: this is meta description
+price: Skontaktuj się
 ---
 
 Nasz Plan Indywidualny to rozwiązanie stworzone specjalnie dla klientów, którzy mają szczególne wymagania i oczekiwania dotyczące swoich kampanii reklamowych. Oferujemy spersonalizowane podejście i elastyczność w dostosowaniu naszych usług do Twoich potrzeb. W ramach tego planu oferujemy:

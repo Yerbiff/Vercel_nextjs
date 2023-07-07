@@ -26,7 +26,7 @@ const Document = () => {
       </Head>
       <body>
         <Main />
-        <TwSizeIndicator />
+        {/* <TwSizeIndicator /> */}
         <NextScript />
       </body>
     </Html>

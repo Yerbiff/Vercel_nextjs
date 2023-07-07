@@ -12,8 +12,8 @@ const PakietSingle = ({ frontmatter, content, mdxContent }) => {
       title={title}
       description={description ? description : content.slice(0, 120)}
     >
-      <section className="section">
-        <div className="container">
+      <section className="section ">
+        <div className="container ">
           <div className="mb-4 text-center md:px-24">
             {image && (
               <div className="mb-8">
@@ -26,8 +26,8 @@ const PakietSingle = ({ frontmatter, content, mdxContent }) => {
                 />
               </div>
             )}
-            {markdownify(title, "h1", "h2 mb-8")}
-            <div className="content">
+            {markdownify(title, "h1", "h2 mb-8 ")}
+            <div className="content text-justify">
               <MDXRemote {...mdxContent} components={shortcodes} />
             </div>
           </div>

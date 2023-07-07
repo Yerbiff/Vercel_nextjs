@@ -82,11 +82,11 @@
 .bulletPoints {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 30px;
+  
 }
 
 .bulletItem {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  // padding: 10px;
 }

@@ -1,7 +1,8 @@
 ---
 title: Podstawowy
-image: /images/authors/john-doe.jpg
+image: /images/pakiety/swatch-miętowy-pastelowy.jpg
 description: this is meta description
+price: '600zł / mies'
 ---
 
 Nasz Plan Podstawowy to idealne rozwiązanie dla małych firm i osób, które dopiero rozpoczynają swoją przygodę z reklamą. Oferujemy profesjonalne usługi reklamowe w przystępnej cenie. Ten plan obejmuje:
