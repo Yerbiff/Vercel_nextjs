@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Oferta = () => {
   const cities = [
@@ -19,12 +20,17 @@ const Oferta = () => {
     { name: 'Poznań', slug: 'poznan' },
     { name: 'Szczecin', slug: 'szczecin' },
   ];
+  const router = useRouter();
+  const miasto = router.query.miasto
+
+  const selectedCity = cities.find(city => city.slug === miasto);
+  const cityName = selectedCity ? selectedCity.name : '';
   return (
     <section className="text-gray-600 body-font">
     <div className="max-w-7xl mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
     <div className="lg:flex-grow md:w-1/2 md:ml-24 pt-6 flex flex-col md:items-start md:text-left mb-40 items-center text-center">
         <h1 className="mb-5 sm:text-6xl text-5xl items-center Avenir xl:w-2/2 text-gray-900">
-        Tworzymy wspaniałe strategie marketingowe
+        Wspaniałe strategie marketingowe {cityName}
         </h1>
         <p className="mb-4 xl:w-3/4 text-gray-600 text-lg">
         W dzisiejszym konkurencyjnym świecie biznesu, skuteczne strategie marketingowe są kluczowe dla osiągnięcia sukcesu. Bez dobrze przemyślanej i zintegrowanej strategii, trudno jest dotrzeć do swojej docelowej grupy odbiorców i zbudować silną obecność na rynku.
@@ -35,7 +41,7 @@ const Oferta = () => {
       <div className="xl:mr-44 sm:mr-0 sm:mb-28 mb-0 lg:mb-0 mr-48 md:pl-10">
         <img
           className="w-80 md:ml-1 ml-24 border rounded-lg"
-          alt="iPhone-12"
+          alt="ludzie przy laptopach"
           src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
         ></img>
       </div>
@@ -44,7 +50,7 @@ const Oferta = () => {
       <div className="container px-5 mx-auto lg:px-24 ">
         <div className="flex flex-col w-full mb-4 text-left lg:text-center">
           <h1 className="mb-8 text-2xl Avenir font-semibold text-black">
-          Nasze strategie marketingowe obejmują szeroki zakres działań, takich jak badanie rynku, analiza konkurencji, identyfikacja grupy docelowej, kreowanie spójnego wizerunku marki, tworzenie wartościowych treści, optymalizacja SEO, kampanie reklamowe, działania w mediach społecznościowych i wiele więcej.
+          W mieście <b>{cityName}</b> nasze strategie marketingowe obejmują szeroki zakres działań, takich jak badanie rynku, analiza konkurencji, identyfikacja grupy docelowej, kreowanie spójnego wizerunku marki, tworzenie wartościowych treści, optymalizacja SEO, kampanie reklamowe, działania w mediach społecznościowych i wiele więcej.
           </h1>
         </div>
         <div className="grid grid-cols-2 gap-16 mb-16 text-center lg:grid-cols-4">

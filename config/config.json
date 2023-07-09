@@ -10,9 +10,8 @@
   },
 
   "settings": {
-    "pagination": 50,
-    "summary_length": 300,
-    "blog_folder": "posts"
+    "pagination": 5,
+    "summary_length": 300
   },
 
   "params": {
@@ -22,7 +21,7 @@
   },
 
   "metadata": {
-    "meta_author": "Themefisher",
+    "meta_author": "me",
     "meta_image": "/images/og-image.png",
     "meta_description": "MediaFusion | Agencja Reklamowa"
   }

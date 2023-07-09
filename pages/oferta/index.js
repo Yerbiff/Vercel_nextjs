@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from 'next/router';
 
 const Oferta = () => {
   const cities = [
@@ -19,6 +20,13 @@ const Oferta = () => {
     { name: 'Poznań', slug: 'poznan' },
     { name: 'Szczecin', slug: 'szczecin' },
   ];
+  // const router = useRouter();
+  // const { lokalizacja } = router.query;
+
+  // if (lokalizacja) {
+  //   // Kod obsługi strony "/oferta/:lokalizacja" tutaj
+  //   return <h1>Strona oferta dla {lokalizacja}</h1>;
+  // }
   return (
     <section className="text-gray-600 body-font">
     <div className="max-w-7xl mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
@@ -92,7 +100,7 @@ const Oferta = () => {
           {cities.map((city, index) => (
           <div className="w-full sm:w-1/2 md:w-1/4 " key={index}>
               <h3 className="h6 mb-1">
-              <Link className="block hover:text-primary" href={`oferta/${city.slug}`}>{city.name}</Link>
+              <Link className="block hover:text-primary" href={` oferta/${city.slug}`}>{city.name}</Link>
               </h3>
           </div>
           ))}

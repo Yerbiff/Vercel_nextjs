@@ -4,7 +4,7 @@ import { getListPage, getSinglePage } from "@lib/contentParser";
 import { markdownify } from "@lib/utils/textConverter";
 import Pakiety from "@partials/Pakiety";
 
-// blog pagination
+
 const PakietPagination = ({
   pakietIndex,
   pakiety,
